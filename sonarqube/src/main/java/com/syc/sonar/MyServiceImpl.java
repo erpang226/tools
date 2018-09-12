@@ -1,4 +1,4 @@
-package com.syc.demo1;
+package com.syc.sonar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

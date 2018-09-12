@@ -1,4 +1,4 @@
-package com.syc.demo1;
+package com.syc.sonar;
 
 import org.junit.Assert;
 import org.junit.Test;

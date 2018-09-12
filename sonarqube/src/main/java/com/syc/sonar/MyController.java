@@ -1,4 +1,4 @@
-package com.syc.demo1;
+package com.syc.sonar;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,12 @@
-package com.syc.demo1;
+package com.syc.sonar;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Demo1Application {
+public class SonarApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Demo1Application.class, args);
+        SpringApplication.run(SonarApplication.class, args);
     }
 }
