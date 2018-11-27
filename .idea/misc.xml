@@ -9,6 +9,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sonarqube/pom.xml" />
         <option value="$PROJECT_DIR$/jobinterview/pom.xml" />
+        <option value="$PROJECT_DIR$/elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/springdata/pom.xml" />
+        <option value="$PROJECT_DIR$/springmybatis/pom.xml" />
       </list>
     </option>
   </component>

@@ -6,14 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="elasticsearch" />
         <module name="jobinterview" />
         <module name="sonarqube" />
+        <module name="springdata" />
+        <module name="springmybatis" />
         <module name="tools" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="elasticsearch" target="1.8" />
       <module name="jobinterview" target="1.8" />
       <module name="sonarqube" target="1.8" />
+      <module name="springdata" target="1.8" />
+      <module name="springmybatis" target="1.8" />
       <module name="tools" target="1.8" />
     </bytecodeTargetLevel>
   </component>
