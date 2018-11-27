@@ -1,0 +1,42 @@
+spring:
+  # DATASOURCE
+  datasource:
+    username: root
+    password: chenkuo123456
+    url: jdbc:mysql://192.168.100.28:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+    hikari:
+      poolName: mainDataSource
+      maximumPoolSize: 10
+      maxLifetime: 28770000
+      cachePrepStmts: true
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      useLocalSessionState: true
+      useLocalTransactionState: true
+      rewriteBatchedStatements: true
+      cacheResultSetMetadata: true
+      cacheServerConfiguration: true
+      elideSetAutoCommits: true
+      maintainTimeStats: false
+
+#server
+server:
+  port: 18080
+
+#MYBATIS
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.chenkuo.dmo
+ 
+#MAPPER
+mapper:
+  mappers:
+      - com.chenkuo.common.utils.mapper.TkMapper
+  not-empty: false
+  identity: MYSQL
+
+#log
+logging:
+  config: classpath:logback-spring.xml
+  path: logs/big-data-log
+  level: debug

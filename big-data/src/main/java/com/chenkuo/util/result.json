@@ -1,0 +1,53 @@
+{
+  "result": "success",
+  "detail": {
+    "SXED": 327.95,
+    "ZFFPJE": 277.44,
+    "ZWKPRQ": "2018-09-26",
+    "ZJE": 5698.30,
+    "CSXQ": {
+      "HJ": {
+        "YDKSED": 593.57,
+        "XXPGE": 298.14
+      },
+      "SXED": 327.95,
+      "SXKZE": {
+        "YDEKZXS": 2.50,
+        "XXPGE": "272.40╳2.50╳1.10=749.10",
+        "SQPFXS": 1.10,
+        "SJJQYJE": 272.40
+      },
+      "QTL": {
+        "YDKSED": 0.00,
+        "XXPGE": 0.00
+      },
+      "QYSSL": {
+        "YDKSED": 513.44,
+        "XXPGE": 193.97
+      },
+      "SXCSE": {
+        "XXPGE": "298.14╳1.10=327.95",
+        "PFJB": "B",
+        "SQPFXS": 1.10,
+        "SQPF": 73.13
+      },
+      "BMDQY": {
+        "YDKSEDA": 0.00,
+        "XXPGEB": 104.17,
+        "YDKSEDB": 80.13,
+        "XXPGEC": 0.00,
+        "YDKSEDC": 0.00,
+        "XXPGED": 0.00,
+        "YDKSEDD": 0.00,
+        "XXPGEA": 0.00
+      }
+    },
+    "HCFPJE": 0.00,
+    "YXFPJE": 5698.30,
+    "ZFS": 545,
+    "ZFFPFS": 34,
+    "HCFPFS": 0,
+    "YXFPFS": 545,
+    "ZZKPRQ": "2016-10-10"
+  }
+}

@@ -1,0 +1,4 @@
+#env mode
+spring:
+  profiles:
+    active: dev
