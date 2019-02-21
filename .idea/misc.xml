@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/springdata/pom.xml" />
         <option value="$PROJECT_DIR$/springmybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/auth-server/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,7 +11,7 @@
     <groupId>com.syc</groupId>
     <artifactId>auth-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>token-server</name>
+    <name>auth-server</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
