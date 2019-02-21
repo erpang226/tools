@@ -10,7 +10,7 @@ public class Account {
 
     @Id
     private String id;
-    private String user;
+    private String name;
     private String title;
     private String desc;
 
