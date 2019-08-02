@@ -1,0 +1,13 @@
+db: # v1.1.0 新增
+  url: jdbc:mysql://localhost:3306/blade
+  username: root
+  password: root
+author: syc
+packageName: com.syc.javacodegenerator
+path:
+  controller: controller
+  service: service.impl
+  interf: service # v1.2.1 新增
+  dao: dao
+  entity: entity
+  mapper: mybatis

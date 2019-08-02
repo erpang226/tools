@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.syc.javacodegenerator.dao.BladeRoleDao">
+
+    <resultMap id="bladeRoleResultMap" type="com.syc.javacodegenerator.entity.BladeRole">
+        <id column="id" property="id"/> 
+        <result column="tenantCode" property="tenantCode"/> 
+        <result column="parentId" property="parentId"/> 
+        <result column="roleName" property="roleName"/> 
+        <result column="sort" property="sort"/> 
+        <result column="roleAlias" property="roleAlias"/> 
+        <result column="isDeleted" property="isDeleted"/> 
+
+        
+        
+    </resultMap>
+
+    <sql id="bladeRoleColumns">
+        blade_role.id AS "id",
+        blade_role.tenant_code AS "tenantCode",
+        blade_role.parent_id AS "parentId",
+        blade_role.role_name AS "roleName",
+        blade_role.sort AS "sort",
+        blade_role.role_alias AS "roleAlias",
+        blade_role.is_deleted AS "isDeleted"
+    </sql>
+
+    <sql id="bladeRoleJoins">
+        
+    </sql>
+
+    <select id="get" resultMap="bladeRoleResultMap">
+        SELECT
+        <include refid="bladeRoleColumns" />
+        FROM blade_role <include refid="bladeRoleJoins" />
+        <where>
+        blade_role.id = #{id}
+        </where>
+    </select>
+
+    <select id="findList" resultMap="bladeRoleResultMap">
+        SELECT
+        <include refid="bladeRoleColumns" />
+        FROM blade_role <include refid="bladeRoleJoins" />
+        <where>
+        </where>
+    </select>
+
+    <select id="findAllList" resultMap="bladeRoleResultMap">
+        SELECT
+        <include refid="bladeRoleColumns" />
+        FROM blade_role <include refid="bladeRoleJoins" />
+        <where>
+        </where>
+    </select>
+
+    <insert id="insert">
+        INSERT INTO blade_role(
+            id,
+            tenant_code,
+            parent_id,
+            role_name,
+            sort,
+            role_alias,
+            is_deleted
+        )
+        VALUES (
+            #{id},
+            #{tenantCode},
+            #{parentId},
+            #{roleName},
+            #{sort},
+            #{roleAlias},
+            #{isDeleted}
+        )
+    </insert>
+
+    <insert id="insertBatch">
+        INSERT INTO blade_role(
+            id,
+            tenant_code,
+            parent_id,
+            role_name,
+            sort,
+            role_alias,
+            is_deleted
+        )
+        VALUES
+        <foreach collection ="list" item="bladeRole" separator =",">
+        (
+            #{bladeRole.id},
+            #{bladeRole.tenantCode},
+            #{bladeRole.parentId},
+            #{bladeRole.roleName},
+            #{bladeRole.sort},
+            #{bladeRole.roleAlias},
+            #{bladeRole.isDeleted}
+        )
+        </foreach>
+    </insert>
+
+    <update id="update">
+        UPDATE blade_role SET
+        id = #{id},
+        tenant_code = #{tenantCode},
+        parent_id = #{parentId},
+        role_name = #{roleName},
+        sort = #{sort},
+        role_alias = #{roleAlias},
+        is_deleted = #{isDeleted}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        DELETE FROM blade_role
+        WHERE id = #{id}
+    </update>
+
+</mapper>
