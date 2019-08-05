@@ -1,18 +1,25 @@
 
-spring.datasource:
-  druid:
-    url:  jdbc:mysql://localhost:3306/blade
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blade
     username: root
     password: root
-    db-type: com.alibaba.druid.pool.DruidDataSource
-    initial-size: 5
-    min-idle: 5
-    max-active: 20
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: Syctest
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select 1
 
 
 ###mybatis 配置####
 mybatis:
-  type-aliases-package: com.hiynn.entity
+  type-aliases-package: com.syc.javacodegenerator.entity
   mapper-locations: classpath:mybatis/*.xml
   configuration:
     call-setters-on-nulls: true
