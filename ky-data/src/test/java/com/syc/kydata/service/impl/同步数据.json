@@ -1,0 +1,46 @@
+{
+  "userId": "1234",
+  "customers": [
+    {
+      "skbId": "5d6e4ae5eed9c6480203cac7",
+      "name": "",
+      "phone": "15062153060",
+      "companyName": "南京百点装饰工程有限公司",
+      "url": "https://biz.lixiaoskb.com/report/58f3d00e2fa2a974c3e855084112f021",
+      "callbackUrl": "https://biz.lixiaoskb.com/api/task/receiveRobotResult?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDZlMzdmZDJiNTE1Zjc5MWRkZmVjODgiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzdGF0dXMiOjEsImRpc2FibGUiOmZhbHNlLCJmb3JSb2JvdCI6dHJ1ZSwiaWF0IjoxNTY3NTA5MjIxLCJleHAiOjE4Nzg1NDkyMjF9.OZ8RBr80agVuVEOfv3wgScZ_3VTgMbgRlSitG4FBd2E&dic={\"1000\":\"1000\",\"1001\":\"1001\"}",
+      "bizPid": "58f3d00e2fa2a974c3e855084112f021",
+      "telephoneStatus": "1"
+    },
+    {
+      "skbId": "5d6e4ae5eed9c6480203cac8",
+      "name": "刘**",
+      "phone": "13912991219",
+      "companyName": "南京百点装饰工程有限公司",
+      "url": "https://biz.lixiaoskb.com/report/58f3d00e2fa2a974c3e855084112f021",
+      "callbackUrl": "https://biz.lixiaoskb.com/api/task/receiveRobotResult?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDZlMzdmZDJiNTE1Zjc5MWRkZmVjODgiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzdGF0dXMiOjEsImRpc2FibGUiOmZhbHNlLCJmb3JSb2JvdCI6dHJ1ZSwiaWF0IjoxNTY3NTA5MjIxLCJleHAiOjE4Nzg1NDkyMjF9.OZ8RBr80agVuVEOfv3wgScZ_3VTgMbgRlSitG4FBd2E&dic={\"1000\":\"1000\",\"1001\":\"1001\"}",
+      "bizPid": "58f3d00e2fa2a974c3e855084112f021",
+      "telephoneStatus": "1"
+    },
+    {
+      "skbId": "5d6e4ae5eed9c6480203cac9",
+      "name": "刘**",
+      "phone": "15062253160",
+      "companyName": "南京百点装饰工程有限公司",
+      "url": "https://biz.lixiaoskb.com/report/58f3d00e2fa2a974c3e855084112f021",
+      "callbackUrl": "https://biz.lixiaoskb.com/api/task/receiveRobotResult?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDZlMzdmZDJiNTE1Zjc5MWRkZmVjODgiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzdGF0dXMiOjEsImRpc2FibGUiOmZhbHNlLCJmb3JSb2JvdCI6dHJ1ZSwiaWF0IjoxNTY3NTA5MjIxLCJleHAiOjE4Nzg1NDkyMjF9.OZ8RBr80agVuVEOfv3wgScZ_3VTgMbgRlSitG4FBd2E&dic={\"1000\":\"1000\",\"1001\":\"1001\"}",
+      "bizPid": "58f3d00e2fa2a974c3e855084112f021",
+      "telephoneStatus": "1"
+    },
+    {
+      "skbId": "5d6e4ae5eed9c6480203caca",
+      "name": "刘**",
+      "phone": "13912991299",
+      "companyName": "南京百点装饰工程有限公司",
+      "url": "https://biz.lixiaoskb.com /report/58f3d00e2fa2a974c3e855084112f021",
+      "callbackUrl": "https://biz.lixiaoskb.com/api/task/receiveRobotResult?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDZlMzdmZDJiNTE1Zjc5MWRkZmVjODgiLCJyb2xlIjoibWFpbmFjY291bnQiLCJzdGF0dXMiOjEsImRpc2FibGUiOmZhbHNlLCJmb3JSb2JvdCI6dHJ1ZSwiaWF0IjoxNTY3NTA5MjIxLCJleHAiOjE4Nzg1NDkyMjF9.OZ8RBr80agVuVEOfv3wgScZ_3VTgMbgRlSitG4FBd2E&dic={\"1000\":\"1000\",\"1001\":\"1001\"}",
+      "bizPid": "58f3d00e2fa2a974c3e855084112f021",
+      "telephoneStatus": "4"
+    }
+  ],
+  "happen_time": 1567509221991
+}

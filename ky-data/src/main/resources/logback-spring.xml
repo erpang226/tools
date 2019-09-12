@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <springProperty scope="context" name="logLevel" source="logging.level"/>
+    <springProperty scope="context" name="logPath" source="logging.path"/>
+    <springProperty scope="context" name="applicationName" source="spring.application.name"/>
+
+    <contextName>客优数据</contextName>
+    <!--定义日志文件的存储地址 -->
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>${logLevel}</level>
+        </filter>
+        <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
+            <pattern>%d{HH:mm:ss.SSS} %-5level %-40(%logger)[%file:%line][%thread] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>${logLevel}</level>
+        </filter>
+
+        <!-- 可让每天产生一个日志文件，最多 180 个，自动回滚 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logPath}/%d{yyyy-MM,aux}/ky-data-%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+            <!-- keep 180 days' worth of history capped at 40GB total size -->
+            <maxHistory>180</maxHistory>
+            <totalSizeCap>40GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder charset="UTF-8">
+            <pattern>%d{HH:mm:ss.SSS} %-5level %-40(%logger)[%file:%line][%thread] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="AsyncRollingFile" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="RollingFile"/>
+        <includeCallerData>true</includeCallerData>
+    </appender>
+
+    <!-- 输出到控制台和文件，可定义更多的 Appender -->
+    <root level="${logLevel}">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="AsyncRollingFile"/>
+    </root>
+
+    <!-- 下面配置一些第三方包的日志过滤级别，用于避免刷屏 -->
+    <logger name="org.mybatis" level="DEBUG"/>
+    <logger name="org.apache.ibatis" level="DEBUG"/>
+    <logger name="org.springframework" level="info"/>
+    <logger name="org.springframework.scheduling" level="info"/>
+    <logger name="io.netty" level="info"/>
+    <logger name="org.apache" level="info"/>
+    <logger name="ocom.netflix" level="info"/>
+
+    <!--如果需要打印SQL,可以把下面的级别设置为DEBUG -->
+    <logger name="com.hiynn" level="DEBUG"/>
+
+
+</configuration>

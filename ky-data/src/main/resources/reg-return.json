@@ -1,0 +1,22 @@
+{
+  "error_code": 0,
+  "success":true,
+  "message": "",
+  "data": {
+    "uid":"xxxxxxxxxxxxxxx",必须，第三方系统用户的唯一编码
+    "username":"",#用户名称 ， 必须
+    "role": "mainaccount", 必须
+    "company_name":"",#公司名称 ， 必须
+    "email":"",#邮箱，选填
+    "mobile":"",#手机电话，选填 如果手机和邮箱没有提供，将触发栗子内部的激活流程。激活流程中需要补上手机和邮箱
+    "meals":[{
+      "type" : "试用套餐" # 套餐名称， 必填
+    }],
+    "extra":{
+      "extraSubCount" : 0, # 额外增加子账户数， 选填
+      "extraViewCount": 0, #额外增加日查看数, 选填
+      "enableTask" : true, #是否开通任务中心，选填
+      "taskQuota" : 10000 #任务中心额度，选填
+    }
+  }
+}
