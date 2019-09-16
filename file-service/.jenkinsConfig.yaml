@@ -1,0 +1,30 @@
+type: java #必填，service语言类型
+chart_name: repo/service-jar2 #for helm chart name
+
+platform_name: weinandrugban #平台的简称
+module_name: service-fileservice #模块的简称
+
+stage_input: false #可选，控制是否输入参数
+
+stage_build: false #可选，控制是否构建
+  
+stage_deploy: true
+deploy:
+  namespace: nj-test
+  pvcs:
+  - name: weinandrugban-service-fileservice-pvc
+    mountPath: /usr/local/jar
+  - name: weinandrugban-data-fileserver-pvc
+    mountPath: /fileserver
+  - name: weinandrugban-data-upload-pvc
+    mountPath: /upload
+    notCreate: true
+  - name: weinandrugban-data-template-pvc
+    mountPath: /template
+    notCreate: true
+  - name: weinandrugban-data-resource-pvc
+    mountPath: /resource
+    notCreate: true
+  deployment: weinandrugban-service-fileservice
+  pkgtype: jar
+  nodeport: 30055

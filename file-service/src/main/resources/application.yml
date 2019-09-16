@@ -1,0 +1,45 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://syc:123456@localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+server:
+  port: 8084
+spring:
+  application:
+    name: file-service
+  servlet:
+    multipart:
+      max-file-size: 200Mb
+      max-request-size: 200Mb
+
+
+
+logging:
+  config: 'classpath:logback-spring.xml'
+  path: 'log'
+  level:
+    root: debug
+
+# 文件服务器根目录
+file-root-path: /home/hyadmin/file-server/root
+
+#文件访问静态资源映射
+#file:
+#  uploadUrl : E:/upload/
+#  templateUrl: E:/template/
+#  resourceUrl: E:/resource/
+#  templateStaticPath : /template/**
+#  uploadStaticPath: /upload/**
+#  resourceStaticPath: /resource/**
+
+#文件访问静态资源映射
+file:
+  uploadUrl : /home/hyadmin/file-server/root/upload/
+  templateUrl: /home/hyadmin/file-server/root/template/
+  resourceUrl: /home/hyadmin/file-server/root/resource/
+  templateStaticPath : /template/**
+  uploadStaticPath: /upload/**
+  resourceStaticPath: /resource/**
+

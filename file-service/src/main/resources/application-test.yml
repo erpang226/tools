@@ -1,0 +1,41 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://weinandrugban-service-eureka-svc.nj-test:8761/eureka/
+  instance:
+    #开启ip显示，而不是在注册中心显示主机名
+    prefer-ip-address: true
+    #注册中心服务显示详情配置
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    appname: file-service
+
+spring:
+  application:
+    name: file-service
+  servlet:
+    multipart:
+      max-file-size: 200Mb
+      max-request-size: 200Mb
+
+
+
+logging:
+  config: 'classpath:logback-spring.xml'
+  path: 'log'
+  level:
+    root: debug
+
+# 文件服务器根目录
+file-root-path: /fileserver
+
+#文件访问静态资源映射
+file:
+  uploadUrl : /fileserver/upload/
+  templateUrl: /fileserver/template/
+  resourceUrl: /fileserver/resource/
+  templateStaticPath : /template/**
+  uploadStaticPath: /upload/**
+  resourceStaticPath: /resource/**
+
+
+
