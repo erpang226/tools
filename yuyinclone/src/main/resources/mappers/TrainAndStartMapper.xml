@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.guiji.training.mapper.TrainAndStartMapper">
+    <resultMap id="BaseResultMap" type="com.guiji.training.entity.Model">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="status" property="is_start" jdbcType="INTEGER"/>
+        <result column="create_time" property="create_time" jdbcType="TIMESTAMP"/>
+        <result column="training_done_time" property="training_done_time" jdbcType="VARCHAR"/>
+        <result column="port" property="port" jdbcType="INTEGER"/>
+        <result column="startName" property="startName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="ModelBaseResultMap" type="com.guiji.training.entity.Model">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="create_time" property="create_time" jdbcType="TIMESTAMP"/>
+        <result column="training_done_time" property="training_done_time" jdbcType="VARCHAR"/>
+        <result column="port" property="port" jdbcType="INTEGER"/>
+        <result column="model_name" property="modelName" jdbcType="VARCHAR"/>
+        <result column="create_by" property="create_by" jdbcType="VARCHAR"/>
+        <result column="startTime" property="startTime" jdbcType="VARCHAR"/>
+        <result column="model_url" property="modelUrl" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    id,name,status,training_done_time,create_by,create_time,url,startName,total,port,model_name,startTime,model_url
+  </sql>
+
+
+    <!--  <select id="countSeq" parameterType="com.guiji.user.dao.entity.SysMenuExample" resultType="java.lang.Integer" >-->
+    <!--    select count(*) from sys_menu-->
+    <!--    <if test="_parameter != null" >-->
+    <!--      <include refid="Example_Where_Clause" />-->
+    <!--    </if>-->
+    <!--  </select>-->
+
+    <update id="updateByKey">
+    update package
+    set status = #{status,jdbcType=INTEGER}
+    where id=#{seqId}
+
+  </update>
+    <update id="updateByName">
+    update package
+    set status = #{status,jdbcType=INTEGER}
+    where name=#{name}
+
+  </update>
+
+
+    <select id="querySeq" parameterType="string" resultType="com.guiji.training.entity.Model">
+        select
+        id,name,status,training_done_time,create_by,create_time,url,startName,port,model_name,startTime,model_url
+        from package
+        where id=#{seqId}
+        ORDER by create_time
+    </select>
+
+    <update id="updateStartParmByKey">
+    update package
+    set startName = #{startName,jdbcType=INTEGER},
+    model_name =#{modelName}
+    where id=#{seqId}
+
+  </update>
+    <select id="queryMaxPort" resultType="Integer">
+        select
+         port
+        from package
+          ORDER by port desc
+        LIMIT 1
+    </select>
+
+    <update id="updatePortByKey">
+    update package
+    set port = #{port,jdbcType=INTEGER}
+    where id=#{seqId}
+  </update>
+
+    <select id="queryModelInfos" resultMap="ModelBaseResultMap">
+        select
+        DISTINCT
+        id,name,status,training_done_time,create_by,create_time,url,startName,total,port,model_name,startTime,model_url
+        from package
+        where 1=1
+        <if test="status != null">
+            and status =#{status}
+        </if>
+        <if test="name!=null and name!=''">
+            and model_name like CONCAT('%',#{name},'%')
+        </if>
+        order by startTime desc
+    </select>
+
+    <update id="updateTrainByKey">
+    update package
+    set status = #{status,jdbcType=INTEGER},
+    training_done_time= #{trainTime}
+    where id=#{seqId}
+
+  </update>
+
+
+    <select id="queryModelInfo" resultType="com.guiji.training.entity.Model">
+        select
+        DISTINCT
+        port,model_name,status
+        from package
+        where model_name=#{modelName}
+    </select>
+
+    <update id="updateStartByKey">
+    update package
+    set status = #{status,jdbcType=INTEGER},
+    startTime =#{startTime},
+    model_url =#{modelUrl}
+
+    where id=#{seqId}
+  </update>
+
+</mapper>
