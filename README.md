@@ -2,4 +2,4 @@
 
 **功能点**
 
-[个人](www.baidu.com)
+[个人](https://www.baidu.com/)
